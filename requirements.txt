@@ -5,12 +5,14 @@ python-dotenv==1.0.1
 requests>=2.31.0
 
 # --- Voice, Audio & Speech ---
-speechrecognition==3.10.4
-sounddevice>=0.4.6
-simpleaudio>=1.0.4
-wavio>=0.0.7
-pyaudio>=0.2.14
-gtts>=2.5.3
+# The following packages need a sound device and fail on Render.
+# Keep them commented out; use only locally.
+# speechrecognition==3.10.4
+# sounddevice>=0.4.6
+# simpleaudio>=1.0.4
+# wavio>=0.0.7
+# pyaudio>=0.2.14
+gtts>=2.5.3   # safe (pure Python, uses Google TTS API)
 
 # --- Twilio / Exotel Integration ---
 twilio==8.10.0
@@ -24,8 +26,7 @@ google-auth>=2.29.0
 langchain>=0.3.0
 langgraph>=0.5.0
 openai>=1.12.0
-# SarvamAI (for Text-to-Speech)
-sarvamai~=0.1.15
+sarvamai~=0.1.15  # SarvamAI TTS client
 
 # --- Semantic Search / FAQ Matching ---
 sentence-transformers>=3.0.1
